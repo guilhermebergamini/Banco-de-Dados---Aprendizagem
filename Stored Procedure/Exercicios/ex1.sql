@@ -2,7 +2,7 @@ DELIMITER $$
 CREATE PROCEDURE CalcularDesconto(IN valor DECIMAL(6,2))
 BEGIN
 DECLARE valor_final DECIMAL(6,2);
-DECLARE status_desconto VARCHAR(20);
+DECLARE status_desconto VARCHAR(20); ;
 
 IF valor >= 100 THEN
 SET valor_final = valor - (valor * 0.1) ;
