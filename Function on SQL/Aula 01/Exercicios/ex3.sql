@@ -1,0 +1,14 @@
+DELIMITER $$
+
+DROP FUNCTION IF EXISTS  fn_primeira_letra $$
+CREATE FUNCTION fn_primeira_letra (x VARCHAR(200))
+RETURNS CHAR(1)
+DETERMINISTIC
+NO SQL
+BEGIN
+    RETURN LEFT(x, 1);
+END $$
+DELIMITER ;
+
+SELECT fn_primeira_letra ("Gui");
+
